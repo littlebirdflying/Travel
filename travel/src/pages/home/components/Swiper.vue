@@ -1,11 +1,15 @@
 <template>
-  <div >
+  <div>
     <div class="wrapper">
       <swiper :options="swiperOption">
-        <swiper-slide v-for="item of swiperList" :key="item.id">
-          <img class="swiper-img" :src="item.imgUrl" alt="">
+        <swiper-slide v-for="item of swiperList"
+                      :key="item.id">
+          <img class="swiper-img"
+               :src="item.imgUrl"
+               alt="">
         </swiper-slide>
-        <div class="swiper-pagination"  slot="pagination"></div>
+        <div class="swiper-pagination"
+             slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -14,19 +18,22 @@
 <script>
 export default {
   name: 'HomeSwiper',
-  data () {
+  data() {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
       },
-      swiperList: [{
-        id: '0001',
-        imgUrl:'//img1.qunarzz.com/qs/1811/3f/85a00499e2e0802.jpg'
-      }, {
-        id: '0002',
-        imgUrl:'//img1.qunarzz.com/qs/1809/64/62160a38d119c202.jpg'
-      }]
+      swiperList: [
+        {
+          id: '0001',
+          imgUrl: '//img1.qunarzz.com/qs/1811/3f/85a00499e2e0802.jpg'
+        },
+        {
+          id: '0002',
+          imgUrl: '//img1.qunarzz.com/qs/1809/64/62160a38d119c202.jpg'
+        }
+      ]
     }
   }
 }
@@ -38,7 +45,7 @@ export default {
   overflow hidden
   width 100%
   height 0
-  padding-bottom 25.60%
+  padding-bottom 25.6%
   background #eeeeee
   .swiper-img
     width 100%
