@@ -3,7 +3,7 @@
     <div class="title">周末去哪儿</div>
     <ul>
       <li class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of list"
           :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl"
@@ -21,46 +21,24 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data() {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-          title: '故宫',
-          desc: '故宫很大哦'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-          title: '故宫',
-          desc: '故宫很大哦'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-          title: '故宫',
-          desc: '故宫很大哦'
-        }
-      ]
-    }
+    return {}
   }
 }
 </script>
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
 .title
-  margin-top 0.2rem
   line-height 0.8rem
   background #eeeeee
   text-indent 0.2rem
 .item-img-wrapper
   overflow hidden
   height 0
-  padding-bottom 33.9%
+  padding-bottom 37.09%
   .item-img
     width 100%
 .item-info
@@ -74,5 +52,3 @@ export default {
     color #ccc
     ellipsis()
 </style>
-
-
