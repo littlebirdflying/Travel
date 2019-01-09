@@ -15,7 +15,8 @@
     </div>
     <common-gallary :imgs="imgs"
                     v-show="showGallary"
-                    @close="handleGallaryClose"></common-gallary>
+                    @close="handleGallaryClose">
+    </common-gallary>
   </div>
 
 </template>
